@@ -1,0 +1,39 @@
+#!/bin/env python
+# -*- coding: iso-8859-1 -*-
+from datetime import date
+import os
+
+os.system("clear")
+
+print ("""
+         \t\t#########################################
+         \t\t### 1 ## Comando netstat              ###
+         \t\t### 2 ## Ipconfig                     ###
+         \t\t### 3 ## Exibir data                  ###
+         \t\t### 4 ## nslookup                     ###
+         \t\t### 5 ## Sair                         ###
+         \t\t#########################################
+       """)
+
+while True:
+    try:
+        op = int(input("Número: "))
+    except:
+        print ("\Opção inválida! Digite apenas valores numéricos.\n")
+        quit()
+    if op==1:
+        ignoreTHIS = os.system("netstat -a ")
+    elif op==2:
+        ignoreTHIS = os.system("ipconfig >> ipconfig.txt")
+    elif op==3:
+        print (date.today()) 
+        ignoreTHIS = os.system("time +%d/%m/%Y")
+    elif op==4:
+        print (nslookup -sil >> nslookup.txt)
+    elif op==5:
+        print ("\nPrograma Encerrado.\n\n") 
+        quit()
+    else:
+        print ("Opção incorreta.") 
+    break  
+        
